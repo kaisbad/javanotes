@@ -36,6 +36,7 @@ if (b > 0) {
 } else if (b < 0) {
   console.log("negative number");
 } else if (b === 0) {
+  console.log("zero");
 } else {
   console.log("its zero? maybe who knows");
 }
