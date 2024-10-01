@@ -20,7 +20,7 @@ let bool = true; //true or false
 let nulls = null; //null is absence of value
 let undefined = undefined; //no value */
 //x,y are arguement
-function add(x, y) {
+/* function add(x, y) {
   //not magic
   return x + y;
   //cannot write after return statement
@@ -40,3 +40,30 @@ if (b > 0) {
 } else {
   console.log("its zero? maybe who knows");
 }
+ */
+
+/* console.log("aiohfuhashlasdg");
+const header = document.querySelector("h1"); */
+
+const DOMSelectors = {
+  header: document.querySelector("h1"),
+  descriptiom: document.querySelector(".card-desc"),
+  items: document.querySelector("li"),
+};
+const student = { name: "Mark", age: 16 };
+
+console.log(DOMSelectors.items);
+function changeColor() {
+  //find element with querySelector
+  let button = document.querySelector("button");
+  //listen for a click even
+  console.log(button);
+  button.addEventListener("click", function (event) {
+    event.preventDefault();
+    //logging the click event
+    console.log(event.target);
+    button.style.backgroundColor = "red";
+  });
+}
+//call functions
+changeColor();
