@@ -3,13 +3,11 @@ const students = ["Matt", "Mark", "Josephine", "Thomas"];
 //students.forEach((student) => console.log(student));
 //loop through every element in list
 
-const movie = [
+const movies = [
   {
     title: "Star Wars",
     release: 1977,
     actors: ["Mark", "Harrison", "Carrie"],
-
-    title,
   },
   { title: "ahfkuhas", release: 1991, actors: ["Jonathan", "Thomas"] },
 ];

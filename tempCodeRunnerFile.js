@@ -1,0 +1,1 @@
+movies.forEach((movie) => console.log(movie.title));
