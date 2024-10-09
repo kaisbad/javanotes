@@ -57,7 +57,7 @@ const student = { name: "Mark", age: 16 };
 console.log(DOMSelectors.items);
 function changeColor() {
   //find element with querySelector
-  let button = document.querySelector("btn");
+  let button = document.querySelector(".btn");
   //listen for a click even
   console.log(button);
   button.addEventListener("click", function (event) {
