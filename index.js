@@ -49,13 +49,15 @@ const DOMSelectors = {
   header: document.querySelector("h1"),
   descriptiom: document.querySelector(".card-desc"),
   items: document.querySelector("li"),
+  cardHeader: document.querySelector("cardHeader"),
+  form: document.querySelector(".form"),
 };
 const student = { name: "Mark", age: 16 };
 
 console.log(DOMSelectors.items);
 function changeColor() {
   //find element with querySelector
-  let button = document.querySelector("button");
+  let button = document.querySelector("btn");
   //listen for a click even
   console.log(button);
   button.addEventListener("click", function (event) {
@@ -67,3 +69,21 @@ function changeColor() {
 }
 //call functions
 changeColor();
+
+const item = document.querySelectorAll("li");
+//turn the nodelist into an array
+const items = Array.from(item);
+//iterate/loop over array and for each element make the color red
+items.forEach((el) => (el.style.color = "red"));
+
+const buttons = document.querySelectorAll("button");
+buttons.forEach((btn) =>
+  btn.addEventListener("click", function (event) {
+    console.log(event.targer.textContent);
+  })
+);
+
+//event listener for form
+//get values from form for widget object
+//create the card insert the card
+//find remove buttons and add event listeners
