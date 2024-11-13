@@ -45,7 +45,7 @@ if (b > 0) {
 /* console.log("aiohfuhashlasdg");
 const header = document.querySelector("h1"); */
 
-const DOMSelectors = {
+/* const DOMSelectors = {
   header: document.querySelector("h1"),
   descriptiom: document.querySelector(".card-desc"),
   items: document.querySelector("li"),
@@ -81,9 +81,34 @@ buttons.forEach((btn) =>
   btn.addEventListener("click", function (event) {
     console.log(event.targer.textContent);
   })
-);
+); */
 
 //event listener for form
 //get values from form for widget object
 //create the card insert the card
 //find remove buttons and add event listeners
+
+//gets data
+//shows data
+async function getData(URL) {
+  //fetch returns a promise
+  try {
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+    //guard clause
+    if (response.status != 200) {
+      throw new Error(response);
+    } else {
+      const data = await response.json();
+      document.querySelector("h1").textContent = data.name;
+      console.log(data);
+    }
+  } catch (error) {
+    console.log(error);
+    alert("sorry could not find that pocket monster");
+  }
+
+  //turned into json
+  const data = await response.json();
+  console.log(response);
+}
+getData();
