@@ -95,7 +95,7 @@ async function getData(URL) {
   try {
     const response = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
     //guard clause
-    if (response.status != 200) {
+    if (response.status === 200) {
       throw new Error(response);
     } else {
       const data = await response.json();
